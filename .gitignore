@@ -1,0 +1,98 @@
+# ==========================================
+# SENTINEL — .gitignore
+# ==========================================
+
+# Environment & Secrets
+.env
+.env.local
+.env.production
+*.key
+*.pem
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Logs
+logs/
+*.log
+
+# Azure credentials
+azure_credentials.json
+.azure/
+config.json
+
+# Vector Database
+data/faiss_index/
+*.index
+*.pkl
+
+# Processed Data
+data/processed/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Metrics exports
+data/metrics/*.json
+data/metrics/*.csv
+
+# Build artifacts
+*.pyc
+*.pyo
+.mypy_cache/
+.pyre/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Azure ML artifacts
+azureml-logs/
+outputs/
+user_managed_dependencies/

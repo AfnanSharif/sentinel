@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200" style="background:#0B132B; border-radius:10px;">
+  <style>
+    @keyframes radarPulse {
+      0% { r: 10px; opacity: 1; }
+      100% { r: 90px; opacity: 0; }
+    }
+    @keyframes rotateRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .radar-circle {
+      fill: none;
+      stroke: #c5a880;
+      stroke-width: 1.5;
+      animation: radarPulse 3s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+      transform-origin: 100px 100px;
+    }
+    .rotating-dials {
+      fill: none;
+      stroke: #3A506B;
+      stroke-width: 2;
+      stroke-dasharray: 40 20;
+      animation: rotateRing 15s linear infinite;
+      transform-origin: 100px 100px;
+    }
+    .shield-icon {
+      fill: #c5a880;
+      filter: drop-shadow(0 0 8px rgba(197, 168, 128, 0.5));
+    }
+    .text-title {
+      font-family: 'Cinzel', 'Georgia', serif;
+      font-weight: bold;
+      font-size: 36px;
+      letter-spacing: 6px;
+      fill: #c5a880;
+    }
+    .text-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      fill: #A9B2C3;
+      letter-spacing: 2px;
+    }
+  </style>
+
+  <!-- Radar Scan Circles -->
+  <circle cx="100" cy="100" r="80" class="rotating-dials" />
+  <circle cx="100" cy="100" r="10" class="radar-circle" />
+  <circle cx="100" cy="100" r="10" class="radar-circle" style="animation-delay: 1s;" />
+  <circle cx="100" cy="100" r="10" class="radar-circle" style="animation-delay: 2s;" />
+
+  <!-- Shield Shape in Center of Radar -->
+  <path d="M 100,75 L 118,83 L 118,97 C 118,111 100,121 100,121 C 100,121 82,111 82,97 L 82,83 Z" class="shield-icon" />
+
+  <!-- Text Group -->
+  <g transform="translate(230, 95)">
+    <text x="0" y="5" class="text-title">SENTINEL 🛡️</text>
+    <text x="0" y="32" class="text-sub">ENTERPRISE CLIENT SUPPORT &amp; SLA PIPELINE</text>
+  </g>
+</svg>
